@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Character Counter</title>
+</head>
+<style>
+    body{
+        background-color: rgb(41, 137, 105);
+    }
+    #first{
+        background-color: rgb(55, 120, 108);
+        margin: 230px;
+        margin-left:310px;
+        width: 50%;
+        padding-bottom: 30px;
+        border: 5px black solid;
+    }
+    #first:hover{
+        box-shadow: 20px 20px 60px;
+        transition: 0.5s;
+
+    }
+    #inp{
+        height: 100px;
+        width: 70%;
+        margin: 0px 60px;
+    }
+    h1{
+        padding:20px 60px
+    }
+    #result{
+        display: flex;
+    }
+    #inp1{
+        padding-top: 5px;
+        padding-left: 70px;
+
+    }
+    #inp2{
+        padding-top: 5px;
+        padding-left: 260px;
+    }
+   
+</style>
+<body>
+    <div id="first">
+        <h1>Real-Time Character Counter</h1>
+        <textarea id="inp" placeholder="Please enter your text here"></textarea>
+        <div id="result">
+        <p id="inp1">Total Characters :<span id="inp3">00</span></p>
+        <p id="inp2">Remaining :<span id="inp4">100</span></p>
+    </div>
+    </div>
+</body>
+<script>
+    let count=document.getElementById("inp");
+    let total=document.getElementById("inp1")
+    let rem=document.getElementById("inp2")
+    count.addEventListener('input',function(){
+    let words=this.value;
+    let count1=words.length;
+    inp3.innerText=count1;
+    inp4.innerText=100-count1;
+    if(words.length>100)
+    window.alert("Only 100 Characters can be enter")
+    });
+    
+
+</script>
+</html>
